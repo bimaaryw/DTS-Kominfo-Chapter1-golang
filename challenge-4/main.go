@@ -3,29 +3,27 @@ package main
 import "fmt"
 
 type Absen struct {
-	Nama	string
-	Alamat	string
-	Pekerjaan	string
-	Alasan	string
+	Nama,Alamat,Pekerjaan,Alasan	string
 }
 
 func main(){
-	var absen Absen
+	
+	//var absen1 = Absen{Nama: "Bima", Alamat: "Pati", Pekerjaan: "Mahasiswa", Alasan: "Sertifikat"}
+	//var absen2 = Absen{Nama: "Ary", Alamat: "Pati", Pekerjaan: "Mahasiswa", Alasan: "Mencari Ilmu"}
 
-//	absen.Nama = "Bima","Ary"
-//	absen.Alamat = "Pati","Kayen"
-//	absen.Pekerjaan= "mahasiswa","pelajar"
-//	absen.Alasan ="sertifikat","ujian"
+	var absen = []Absen{
+		{Nama: "Bima", Alamat: "Pati", Pekerjaan: "Mahasiswa", Alasan: "Sertifikat"},
+		{Nama: "Ary", Alamat: "Pati", Pekerjaan: "Mahasiswa", Alasan: "Mencari Ilmu"},
+		{Nama: "Bima", Alamat: "Pati", Pekerjaan: "Mahasiswa", Alasan: "Sertifikat"},
+	}
 
-//	fmt.Println(absen.Nama)
-//	fmt.Println(absen.Alamat)
-//	fmt.Println(absen.Pekerjaan)
-//	fmt.Println(absen.Alasan)
+	//fmt.Println(absen1)
+	//fmt.Println(absen2)
+	
+	for  _, v := range absen {
+		fmt.Printf("%v \n", v)
+	}
 
-fmt.Println(absen.Nama)
-fmt.Println(absen.Alamat)
-fmt.Println(absen.Pekerjaan)
-fmt.Println(absen.Alasan)
+
 
 }
-
