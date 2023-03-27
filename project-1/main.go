@@ -19,7 +19,7 @@ func main() {
 		"coba 3",
 	}
 
-	fmt.Println("==============ACAK==============")
+	fmt.Println("============ACAK============")
 
 	var wg sync.WaitGroup
 	for i := 1; i <= 4; i++ {
@@ -35,7 +35,7 @@ func main() {
 		}(i)
 	}
 	wg.Wait()
-	fmt.Println("==============ACAK==============")
+	fmt.Println("============ACAK============")
 }
 
 // blm selese msh acak aja tpi dikumpulkan dlu
