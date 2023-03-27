@@ -2,39 +2,40 @@ package main
 
 import (
 	"fmt"
-	"runtime"
 	"sync"
 )
 
 func main() {
 
-	var data1 interface{} = []string{
+	var data1 = []string{
 		"bisa 1",
 		"bisa 2",
 		"bisa 3",
 	}
 
-	var data2 interface{} = []string{
+	var data2 = []string{
 		"coba 1",
 		"coba 2",
 		"coba 3",
 	}
 
-	runtime.GOMAXPROCS(2)
+	fmt.Println("==============ACAK==============")
 
 	var wg sync.WaitGroup
-	for i := 1; i <= 8; i++ {
+	for i := 1; i <= 4; i++ {
 		wg.Add(1)
 		go func(id int) {
-			if id%2 == 1 {
 				fmt.Printf("%v %d\n", data1, id)
-			} else {
+			wg.Done()
+		}(i)
+		wg.Add(1)
+		go func(id int) {
 				fmt.Printf("%v %d\n", data2, id)
-			}
 			wg.Done()
 		}(i)
 	}
 	wg.Wait()
+	fmt.Println("==============ACAK==============")
 }
 
-// blm selese msh proses tpi sya kumpulkan dlu
+// blm selese msh acak aja tpi dikumpulkan dlu
