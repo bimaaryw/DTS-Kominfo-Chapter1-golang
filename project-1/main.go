@@ -37,5 +37,3 @@ func main() {
 	wg.Wait()
 	fmt.Println("============ACAK============")
 }
-
-// blm selese msh acak aja tpi dikumpulkan dlu
