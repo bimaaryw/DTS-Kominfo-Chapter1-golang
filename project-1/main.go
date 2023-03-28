@@ -37,4 +37,3 @@ func main() {
 	wg.Wait()
 	fmt.Println("============ACAK============")
 }
-// blm selesai
